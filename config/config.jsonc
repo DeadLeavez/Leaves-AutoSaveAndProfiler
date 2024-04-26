@@ -1,0 +1,5 @@
+{
+    "enableNameChange": true,
+    "enableBackup": true,
+    "timeBetweenSavesSeconds": 600
+}

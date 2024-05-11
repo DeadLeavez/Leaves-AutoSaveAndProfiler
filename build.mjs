@@ -37,6 +37,7 @@ import { dirname } from "path";
 import ignore from "ignore";
 import archiver from "archiver";
 import winston from "winston";
+import { jsonc } from "jsonc";
 
 // Get the command line arguments to determine whether to use verbose logging.
 const args = process.argv.slice(2);
@@ -227,13 +228,13 @@ async function loadPackageJson(currentDir) {
  * @returns {Promise<Object>} A promise that resolves to a JSON object containing the contents of the `package.json`.
  */
 async function loadRedirectJson() {
-    const JsonPath = "../redirect.json";
+    const JsonPath = "redirect.jsonc";
 
     if (await fs.exists(JsonPath))
     {
         // Read the contents of the package.json file asynchronously as a UTF-8 string.
         const JsonContent = await fs.promises.readFile(JsonPath, "utf-8");
-        return JSON.parse(JsonContent);
+        return jsonc.parse(JsonContent);
     }
 
     return { redirs: [] };

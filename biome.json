@@ -1,0 +1,14 @@
+{
+    "linter": {
+      "rules": {
+        "suspicious": {
+          "noDebugger": "off",
+          "noExplicityAny": "off"
+        },
+        "style": {
+          "noShoutyConstants": "warn",
+          "useNamingConvention": "error"
+        }
+      }
+    }
+  }

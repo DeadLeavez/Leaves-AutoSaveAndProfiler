@@ -1,5 +1,5 @@
 {
-    "name": "autosaveandprofiler",
+    "name": "autosave_and_profiler",
     "version": "1.0.0",
     "main": "src/mod.js",
     "license": "MIT",
